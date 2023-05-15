@@ -4,14 +4,19 @@ import Button from "../../1_ui/button";
 import {toast} from "react-toastify";
 import postsService from "../../servises/posts.service";
 import ModalWindow from "./modalWindow";
+import {useDispatch} from "react-redux";
+import {actionPosts} from "../../store/posts";
 
 function FormPostDelete({postId, showModal, handleCloseForm}) {
+
+    const dispatch = useDispatch()
 
     const handleDeletePost = async () => {
         try {
             handleCloseForm()
-            const {content} = await postsService.deletePost(postId)
-            console.log(content)
+            // const {content} = await postsService.deletePost(postId)
+            dispatch(actionPosts.deletePost(postId))
+            // console.log(content)
 
             toast(`Post deleted`)
         } catch (error) {

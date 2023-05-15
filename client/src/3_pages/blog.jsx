@@ -30,9 +30,13 @@ function Blog(props) {
     const {data: posts} = useSelector(getPosts())
 
     const [currentPage, setCurrentPage] = useState(1);
-    const pageSize = 3 // заменить на 20
+    const pageSize = 3
 
-    if (!posts) return <Loader/>
+    if (!posts) return (
+        <div className={'flex flex-col justify-center items-center mx-auto'}>
+            <Loader/>
+        </div>
+    )
 
     const count = posts.length;
     const postsCrop = paginate(posts, currentPage, pageSize);

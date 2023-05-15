@@ -17,7 +17,8 @@ const postSlice = createSlice({
             return state
         },
         deletePost: (state, {payload}) => {
-            console.log(`deletePost payload`, payload)
+            const itemIndex = state.data.findIndex(item => item._id == payload);
+            state.data.splice(itemIndex, 1)
             return state
         },
         addPost: (state, {payload}) => {

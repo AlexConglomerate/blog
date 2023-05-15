@@ -4,6 +4,7 @@ import FormScheduleDelete from "./formPostDelete";
 import Edit from "../../1_ui/icon/edit";
 import {useNavigate} from "react-router-dom";
 import localStorageService from "../../servises/localStorage.service";
+import {config} from "../../config";
 
 const BlogPost = ({postId, date, message, caption, fileId, name, userId}) => {
     const navigate = useNavigate()
@@ -13,8 +14,7 @@ const BlogPost = ({postId, date, message, caption, fileId, name, userId}) => {
     const handleCloseForm = () => setShowModal(false)
     const handleOpenForm = () => setShowModal(true)
 
-    const url = 'http://localhost:8080'
-    const imageUrl = `${url}/uploads/${fileId}`
+    const imageUrl = config.apiEndPointUploads + fileId
 
     const handleEdit = () => {
         navigate(`/edit/${postId}`)
