@@ -1,8 +1,9 @@
 import React from 'react';
-import ModalWindow from "../schedule/navSchedule/modalWindow";
+// import ModalWindow from "../schedule/navSchedule/modalWindow";
 import Button from "../../1_ui/button";
 import {toast} from "react-toastify";
 import postsService from "../../servises/posts.service";
+import ModalWindow from "./modalWindow";
 
 function FormPostDelete({postId, showModal, handleCloseForm}) {
 

@@ -1,12 +1,12 @@
 import React from 'react';
-import FormInput from "../1_ui/formInput";
-import FormButton from "../1_ui/formButton";
+import FormInput from "../../1_ui/formInput";
+import FormButton from "../../1_ui/formButton";
 import {useForm} from "react-hook-form";
 import {useNavigate} from "react-router-dom";
-import authService from "../servises/auth.service";
-import localStorageService from "../servises/localStorage.service";
+import authService from "../../servises/auth.service";
+import localStorageService from "../../servises/localStorage.service";
 import {useDispatch, useSelector} from "react-redux";
-import {actionUser, getUser, getUserInfo} from "../store/user";
+import {actionUser, getUser, getUserInfo} from "../../store/user";
 import {toast} from "react-toastify";
 
 function LogIn() {

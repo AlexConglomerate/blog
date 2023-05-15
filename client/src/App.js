@@ -12,20 +12,10 @@ import {getUserInfo} from "./store/user";
 const App = () => {
     const location = useLocation()
     const element = useRoutes(routes(location))
-
-
     const dispatch = useDispatch()
 
-    // const teamId = localStorageService.getTeamId()
-
-    const funcCompleteRedux = async () => {
-        dispatch(getUserInfo())
-        // await completeRedux(teamId, dispatch)
-        // dispatch(setListTeam())
-    }
-
     useEffect(() => {
-        funcCompleteRedux()
+        dispatch(getUserInfo())
     }, []);
 
 

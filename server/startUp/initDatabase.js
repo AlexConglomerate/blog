@@ -4,7 +4,6 @@ const postMock = require('../mock/post.json')
 
 
 module.exports = async () => {
-    console.log(`123123123`, 123123123)
     // если потребуется проинициализировать данные, то их нужно добавить сюда
     const initialDateArr = [
         {mock: postMock, model: postContent},
@@ -29,7 +28,6 @@ const createInitialEntity = async (Model, data) => {
                 return newItem
             } catch (e) {
                 return e
-
             }
         })
     )

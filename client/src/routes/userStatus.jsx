@@ -3,20 +3,16 @@ import LogOut from "../1_ui/icon/logOut";
 import localStorageService from "../servises/localStorage.service";
 import {useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {getListTeams} from "../store/trash/listTeam";
-import {clearRedux} from "../2_components/schedule/table/utils/completeRedux";
 import {getUser} from "../store/user";
 
 
 function UserStatus() {
     const navigate = useNavigate()
     const {email, name} = useSelector(getUser())
-    const dispatch = useDispatch()
 
     const handleLogOut = async () => {
         navigate('/', {replace: false})
         localStorageService.removeAuthData() // Удаляем все токены из localStorage
-        await clearRedux(dispatch)
     }
 
     return (

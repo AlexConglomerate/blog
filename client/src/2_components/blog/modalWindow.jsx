@@ -1,6 +1,4 @@
 import React from 'react';
-import FormInput from "../../../1_ui/formInput";
-import FormButton from "../../../1_ui/formButton";
 
 function ModalWindow({showModal, handleCloseForm, children}) {
     return (

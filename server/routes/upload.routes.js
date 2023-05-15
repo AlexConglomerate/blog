@@ -10,10 +10,10 @@ router.post('/', [upload.single('file'), auth], async (req, res) => {
     res.json({filename: file.filename});
 });
 
-router.get('/', async (req, res) => {
-    const data = await Post.find();
-    res.send(data);
-});
+// router.get('/', async (req, res) => {
+//     const data = await Post.find();
+//     res.send(data);
+// });
 
 
 module.exports = router

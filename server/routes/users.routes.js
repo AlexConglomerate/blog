@@ -66,19 +66,4 @@ router.get('/getUserInfo/:userId', auth, async (req, res) => {
     }
 })
 
-
-router.put('/updateTelegramUserName', auth, async (req, res) => {
-    try {
-        const {telegramUserName, userId} = req.body
-
-        const data = await User.updateOne(
-            {_id: userId},
-            {$set: {telegramUserName}}
-        );
-        res.status(200).send(data) // статус 200 стоит по умолчанию. Поэтому можно просто res.send(list)
-    } catch (e) {
-        res.status(500).json({message: 'На сервере произошла ошибка. Попробуйте позже.'})
-    }
-})
-
 module.exports = router

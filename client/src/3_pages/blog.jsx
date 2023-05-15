@@ -4,10 +4,10 @@ import {paginate} from "../utils/paginate";
 import Pagination from "../2_components/blog/pagination";
 import {downloadPost, getPosts} from "../store/posts";
 import {useDispatch, useSelector} from "react-redux";
-import Loader from "../2_components/schedule/loader";
 import Plus from "../1_ui/icon/plus";
 import {useNavigate} from "react-router-dom";
 import localStorageService from "../servises/localStorage.service";
+import Loader from "../2_components/loader";
 
 function Blog(props) {
 
