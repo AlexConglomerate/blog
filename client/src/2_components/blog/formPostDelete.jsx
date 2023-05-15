@@ -14,10 +14,8 @@ function FormPostDelete({postId, showModal, handleCloseForm}) {
     const handleDeletePost = async () => {
         try {
             handleCloseForm()
-            // const {content} = await postsService.deletePost(postId)
+            await postsService.deletePost(postId)
             dispatch(actionPosts.deletePost(postId))
-            // console.log(content)
-
             toast(`Post deleted`)
         } catch (error) {
             toast('Error. The post is not deleted')
