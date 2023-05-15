@@ -1,0 +1,21 @@
+[
+  {
+    "scheduleId": "123qwe",
+    "userID": "111",
+    "sequence": 1,
+    "data": [
+      {
+        "value": "1",
+        "night": true
+      },
+      {
+        "value": "2",
+        "night": false
+      },
+      {
+        "value": "3",
+        "night": false
+      }
+    ]
+  }
+]
